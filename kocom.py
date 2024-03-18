@@ -614,11 +614,11 @@ def publish_discovery(dev, sub=''):
         if logtxt != "" and config.get('Log', 'show_mqtt_publish') == 'True':
             logging.info(logtxt)
     elif dev == 'elevator':
-        topic = 'homeassistant/elevator/kocom_wallpad_elevator/config'
+        topic = 'homeassistant/switch/kocom_wallpad_elevator/config'
         payload = {
             'name': 'Kocom Wallpad Elevator',
-            'cmd_t': "kocom/myhome/elevator/command",
-            'stat_t': "kocom/myhome/elevator/state",
+            'cmd_t': "kocom/myhome/switch/command",
+            'stat_t': "kocom/myhome/switch/state",
             'val_tpl': "{{ value_json.state }}",
             'pl_on': 'on',
             'pl_off': 'off',
